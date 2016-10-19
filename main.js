@@ -7,16 +7,30 @@ function PlayingCard(suit, value) {
 // var card = new PlayingCard('spades', 'ace');
 
 
-var cardSuits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
-var cardValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack' , 'Queen' , 'King' , 'Ace'];
+
 
 //deck needs one of each card and shuffle and draw methods
-function Deck () {
-  this.suit = suit;
-  this.value = value;
-  this.shuffle = function() {};
-  this.draw = function() {};
+function Deck() {
+ 'use strict';
+
+ var suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
+ var cardValues = [2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 'Jack' , 'Queen' , 'King' , 'Ace'];
+ this.allCards = [];
+
+ for(var i = 0; i < suits.length; i++) {
+   for(var v = 0; v < cardValues.length; v++) {
+     this.allCards.push(new PlayingCard(suits[i], cardValues[v]));
+   }
+ }
+
+ this.shuffle = function () {};
+ this.draw = function () {};
+
+ // define other factors of what a deck is
+
 }
+
+console.log(new Deck());
 
 
 
