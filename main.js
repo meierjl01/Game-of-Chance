@@ -4,16 +4,21 @@ function PlayingCard(suit, value) {
     this.suit = suit;
     this.value = value;
 }
+// var card = new PlayingCard('spades', 'ace');
 
-var card = new PlayingCard('spades', 'ace');
 
-console.log(card);
-
+var cardSuits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
+var cardValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack' , 'Queen' , 'King' , 'Ace'];
 
 //deck needs one of each card and shuffle and draw methods
-// function Deck () {
-//
-// }
+function Deck () {
+  this.suit = suit;
+  this.value = value;
+  this.shuffle = function() {};
+  this.draw = function() {};
+}
+
+
 
 //Die will have to pick a number randomly for itself, only needs value. function will have to change it's value depending on what is rolled
 
